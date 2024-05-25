@@ -144,7 +144,9 @@
 
                     // 接着处理下一行
                     if(index < attr_keys_len - 1) {
-                        tr.find('td:eq(2) .Js_add_attr_name').trigger('click');
+                        //tr.find('td:eq(2) .Js_add_attr_name').trigger('click');
+                        // @see https://github.com/fingerQin/sku/issues/1
+                        tbody.find('tr:eq(0)').find('td:eq(2) .Js_add_attr_name').trigger('click');
                     }
                 });
 
